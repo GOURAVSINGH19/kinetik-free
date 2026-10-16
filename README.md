@@ -42,15 +42,15 @@ npx shadcn@latest add https://kinetikui.vercel.app/r/segmented-nav.json
   <tr>
     <td width="50%">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="apps/web/public/previews/prompt-input-dark.png">
-        <img alt="Prompt Input: an AI prompt box with a glowing border, menus and attachments" src="apps/web/public/previews/prompt-input-light.png">
+        <source media="(prefers-color-scheme: dark)" srcset="public/previews/prompt-input-dark.png">
+        <img alt="Prompt Input: an AI prompt box with a glowing border, menus and attachments" src="public/previews/prompt-input-light.png">
       </picture>
       <p align="center"><a href="https://kinetikui.vercel.app/docs/components/prompt-input"><b>Prompt Input</b></a></p>
     </td>
     <td width="50%">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="apps/web/public/previews/model-selector-dark.png">
-        <img alt="Model Selector: a compact model picker for AI apps" src="apps/web/public/previews/model-selector-light.png">
+        <source media="(prefers-color-scheme: dark)" srcset="public/previews/model-selector-dark.png">
+        <img alt="Model Selector: a compact model picker for AI apps" src="public/previews/model-selector-light.png">
       </picture>
       <p align="center"><a href="https://kinetikui.vercel.app/docs/components/model-selector"><b>Model Selector</b></a></p>
     </td>
@@ -58,15 +58,15 @@ npx shadcn@latest add https://kinetikui.vercel.app/r/segmented-nav.json
   <tr>
     <td width="50%">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="apps/web/public/previews/file-attachment-dark.png">
-        <img alt="File Attachment: upload previews with a progress ring" src="apps/web/public/previews/file-attachment-light.png">
+        <source media="(prefers-color-scheme: dark)" srcset="public/previews/file-attachment-dark.png">
+        <img alt="File Attachment: upload previews with a progress ring" src="public/previews/file-attachment-light.png">
       </picture>
       <p align="center"><a href="https://kinetikui.vercel.app/docs/components/file-attachment"><b>File Attachment</b></a></p>
     </td>
     <td width="50%">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="apps/web/public/previews/organic-growth-dark.png">
-        <img alt="Organic Growth: vines and flowers growing around an element" src="apps/web/public/previews/organic-growth-light.png">
+        <source media="(prefers-color-scheme: dark)" srcset="public/previews/organic-growth-dark.png">
+        <img alt="Organic Growth: vines and flowers growing around an element" src="public/previews/organic-growth-light.png">
       </picture>
       <p align="center"><a href="https://kinetikui.vercel.app/docs/components/organic-growth"><b>Organic Growth</b></a></p>
     </td>
@@ -449,7 +449,7 @@ is installable at `/r/glow-card.json`.
 
 **Optional:** to feature it on the home page, add its slug to `FEATURED` in
 `apps/web/components/ComponentList.tsx` and add `glow-card-light.png` and `glow-card-dark.png`
-(16:10) to `apps/web/public/previews/`. To change the sidebar's category order, edit
+(16:10) to `public/previews/`. To change the sidebar's category order, edit
 `apps/web/lib/component-groups.ts`.
 
 ### How the registry works
