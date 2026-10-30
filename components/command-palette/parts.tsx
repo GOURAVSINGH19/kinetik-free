@@ -4,7 +4,7 @@ import { Fragment, useEffect, useState, type RefObject } from "react"
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion"
 import { CornerDownLeft } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { ease, type ResultGroup, type SimpleSearchItem } from "./types"
+import { ease, type ResultGroup, type CommandPaletteItem } from "./types"
 
 function Highlight({ text, query }: { text: string; query: string }) {
   const index = query ? text.toLowerCase().indexOf(query.toLowerCase()) : -1
@@ -82,7 +82,7 @@ export function SearchResults({
   active: number
   itemRefs: RefObject<Array<HTMLElement | null>>
   onHover: (index: number) => void
-  onChoose: (item: SimpleSearchItem) => void
+  onChoose: (item: CommandPaletteItem) => void
 }) {
   const reduceMotion = useReducedMotion()
 

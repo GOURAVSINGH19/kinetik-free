@@ -1,4 +1,4 @@
-export type SimpleSearchItem = {
+export type CommandPaletteItem = {
   title: string
   group: string
   href?: string
@@ -7,9 +7,9 @@ export type SimpleSearchItem = {
   keywords?: string
 }
 
-export type SimpleSearchProps = {
-  items: SimpleSearchItem[]
-  onSelect: (item: SimpleSearchItem) => void
+export type CommandPaletteProps = {
+  items: CommandPaletteItem[]
+  onSelect: (item: CommandPaletteItem) => void
   hotkey?: string | false
   open?: boolean
   onOpenChange?: (open: boolean) => void
@@ -21,6 +21,6 @@ export type SimpleSearchProps = {
   triggerClassName?: string
 }
 
-export type ResultGroup = [group: string, items: Array<SimpleSearchItem & { index: number }>]
+export type ResultGroup = [group: string, items: Array<CommandPaletteItem & { index: number }>]
 
 export const ease = [0.22, 1, 0.36, 1] as const

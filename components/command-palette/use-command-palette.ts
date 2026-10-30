@@ -1,12 +1,12 @@
 import { useEffect, useId, useMemo, useRef, useState, useSyncExternalStore } from "react"
-import type { ResultGroup, SimpleSearchItem, SimpleSearchProps } from "./types"
+import type { ResultGroup, CommandPaletteItem, CommandPaletteProps } from "./types"
 
 const noopSubscribe = () => () => {}
 
-/** All of SimpleSearch's state: open/closed, query, filter, results, and the keyboard. */
-export function useSimpleSearch({
+/** All of CommandPalette's state: open/closed, query, filter, results, and the keyboard. */
+export function useCommandPalette({
   items, onSelect, hotkey = "k", open: openProp, onOpenChange, onFilterChange,
-}: Pick<SimpleSearchProps, "items" | "onSelect" | "hotkey" | "open" | "onOpenChange" | "onFilterChange">) {
+}: Pick<CommandPaletteProps, "items" | "onSelect" | "hotkey" | "open" | "onOpenChange" | "onFilterChange">) {
   const [innerOpen, setInnerOpen] = useState(false)
   const open = openProp ?? innerOpen
   const [query, setQuery] = useState("")
@@ -75,7 +75,7 @@ export function useSimpleSearch({
     triggerRef.current?.focus()
   }
 
-  const choose = (item: SimpleSearchItem | undefined) => {
+  const choose = (item: CommandPaletteItem | undefined) => {
     if (!item) return
     close()
     onSelect(item)

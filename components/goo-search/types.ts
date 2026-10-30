@@ -11,7 +11,7 @@ export type GooSearchProps = {
   onOpen: (item: GooSearchItem) => void
   onClose?: () => void
   linkResults?: boolean
-  linkAs?: React.ElementType
+  linkAs?: React.ElementType<React.ComponentPropsWithRef<"a">>
   placeholder?: string
   initialQuery?: string
   maxResultsHeight?: number

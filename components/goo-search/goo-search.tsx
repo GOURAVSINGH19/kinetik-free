@@ -13,7 +13,7 @@ export function GooSearch({
   onOpen,
   onClose,
   linkResults = false,
-  linkAs: LinkComponent = "a",
+  linkAs,
   placeholder = "Search…",
   initialQuery = "",
   maxResultsHeight = 340,
@@ -183,7 +183,7 @@ export function GooSearch({
               onOpen={onOpen}
               onClose={onClose}
               linkResults={linkResults}
-              LinkComponent={LinkComponent}
+              LinkComponent={linkAs}
             />
           </div>
         </motion.div>

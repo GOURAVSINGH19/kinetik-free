@@ -5,10 +5,10 @@ import { Search } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { FilterMenu } from "./filter-menu"
 import { Kbd, RotatingPlaceholder, SearchResults } from "./parts"
-import { useSimpleSearch } from "./use-simple-search"
-import type { SimpleSearchProps } from "./types"
+import { useCommandPalette } from "./use-command-palette"
+import type { CommandPaletteProps } from "./types"
 
-export function SimpleSearch({
+export function CommandPalette({
   items,
   onSelect,
   hotkey = "k",
@@ -20,8 +20,8 @@ export function SimpleSearch({
   label = "Search",
   inputProps,
   triggerClassName,
-}: SimpleSearchProps) {
-  const s = useSimpleSearch({ items, onSelect, hotkey, open, onOpenChange, onFilterChange })
+}: CommandPaletteProps) {
+  const s = useCommandPalette({ items, onSelect, hotkey, open, onOpenChange, onFilterChange })
 
   return (
     <>

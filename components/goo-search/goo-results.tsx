@@ -24,7 +24,7 @@ function Highlight({ text, query }: { text: string; query: string }) {
 
 /** Results grouped by category. The highlight slides between rows with a shared layout id. */
 export function GooResults({
-  groups, query, listId, layoutId, activeIndex, itemRefs, onHover, onOpen, onClose, linkResults, LinkComponent,
+  groups, query, listId, layoutId, activeIndex, itemRefs, onHover, onOpen, onClose, linkResults, LinkComponent = "a",
 }: {
   groups: GooGroup[]
   query: string
@@ -36,7 +36,7 @@ export function GooResults({
   onOpen: (item: GooSearchItem) => void
   onClose?: () => void
   linkResults: boolean
-  LinkComponent: React.ElementType
+  LinkComponent?: React.ElementType<React.ComponentPropsWithRef<"a">>
 }) {
   return (
     <>
